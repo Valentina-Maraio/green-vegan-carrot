@@ -11,13 +11,9 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.p-carousel-container {
-    border: 1px solid red;
-}
 
 .dessert {
     width: auto;
     height: 400px;
-    border: 1px solid teal;
     margin: 40px;
 }

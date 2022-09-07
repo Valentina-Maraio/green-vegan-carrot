@@ -13,9 +13,9 @@ const Home = () => {
     <>
     <Banner />
     <Menu />
+    <Dessert />
     <VeganYear />
     <QuoteOne />
-    <Dessert />
     <QuoteTwo />
     <Nutrition />
     <Footer />
