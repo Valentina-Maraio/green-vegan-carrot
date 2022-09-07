@@ -1,8 +1,9 @@
 import React from 'react'
+import './style/VeganYear.css'
 
 const VeganYear = () => {
   return (
-    <div>VeganYear</div>
+    <div className='vegan-year'>VeganYear</div>
   )
 }
 

@@ -1,8 +1,9 @@
 import React from 'react'
+import './style/Nutrition.css'
 
 const Nutrition = () => {
   return (
-    <div>Nutrition</div>
+    <div className='nutrition'>Nutrition</div>
   )
 }
 

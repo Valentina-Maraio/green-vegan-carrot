@@ -1,8 +1,9 @@
 import React from 'react'
+import './style/Quotes.css'
 
 const QuoteOne = () => {
   return (
-    <div>QuoteOne</div>
+    <div className='quotes'>QuoteOne</div>
   )
 }
 
