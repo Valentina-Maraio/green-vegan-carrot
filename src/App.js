@@ -8,7 +8,7 @@ import Home from './components/home/Home';
 import FavRecipes from './pages/favRecipes/FavRecipes';
 import ShoppingList from './pages/shoppingList/ShoppingList';
 import SearchResults from './pages/searchResults/SearchResults';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
