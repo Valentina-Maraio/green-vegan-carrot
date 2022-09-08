@@ -6,7 +6,6 @@ import DessertIntroduction from '../dessertIntroduction/DessertIntroduction';
 import Dessert from '../dessert/Dessert'
 import VeganYearDescription from '../veganYearDescription/VeganYearDescription';
 import VeganYear from '../year/VeganYear'
-import Nutrition from '../nutrition/Nutrition'
 import QuoteOne from '../quotes/QuoteOne';
 import QuoteTwo from '../quotes/QuoteTwo';
 import Footer from '../footer/Footer'
@@ -19,14 +18,11 @@ const Home = () => {
       <div class='introduction'>
         <DessertIntroduction />
       </div>
-      <div class='dessert'>
-          <Dessert />
-      </div>
+      <Dessert />
       <QuoteOne />
       <VeganYearDescription />
       <VeganYear />
       <QuoteTwo />
-      <Nutrition />
       <Footer />
     </>
   )

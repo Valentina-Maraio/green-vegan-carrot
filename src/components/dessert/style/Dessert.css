@@ -1,19 +1,17 @@
-.carousel-demo .product-item .product-item-content {
-    border: 1px solid var(--surface-d);
-    border-radius: 3px;
-    margin: .3rem;
-    text-align: center;
-    padding: 2rem 0;
+.swiper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50px;
 }
 
-.carousel-demo .product-item .product-image {
-    width: 80%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
-
-.dessert {
-    width: auto;
-    height: 400px;
-    margin: 40px;
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
