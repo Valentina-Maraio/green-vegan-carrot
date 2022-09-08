@@ -1,0 +1,14 @@
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+    .introduction,
+    .dessert {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 961px) {
+    .introduction,
+    .dessert {
+      width: 33.3%;
+    }
+  }
