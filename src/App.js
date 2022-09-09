@@ -8,6 +8,7 @@ import Home from './components/home/Home';
 import FavRecipes from './pages/favRecipes/FavRecipes';
 import ShoppingList from './pages/shoppingList/ShoppingList';
 import SearchResults from './pages/searchResults/SearchResults';
+import DessertPage from './components/dessertPage/DessertPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
@@ -23,6 +24,7 @@ function App() {
           <Route path="/favrecipes" element={<FavRecipes />}></Route>
           <Route path="/shoppinglist" element={<ShoppingList />}></Route>
           <Route path="/searchresults" element={<SearchResults />}></Route>
+          <Route path="/dessertpage" element={<DessertPage />}></Route>
         </Routes>
       </Router>
     </div>
