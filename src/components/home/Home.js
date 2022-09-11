@@ -3,7 +3,6 @@ import './style/Home.css'
 import Banner from '../bannerHome/Banner'
 import Menu from '../menu/Menu'
 import DessertButtonPage from '../dessertButtonPage/DessertButtonPage';
-import DessertSwipe from '../dessertSwipe/DessertSwipe'
 import VeganYearDescription from '../veganYearDescription/VeganYearDescription';
 import VeganYear from '../year/VeganYear'
 import QuoteOne from '../quotes/QuoteOne';
@@ -20,7 +19,6 @@ const Home = () => {
       <Spacer />
       <DessertBanner />
       <Spacer />
-      <DessertSwipe />
       <div class='introduction'>
         <DessertButtonPage />
       </div>
