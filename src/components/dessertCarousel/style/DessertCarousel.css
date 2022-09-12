@@ -1,6 +1,9 @@
-.introduction{
+.carousel-box {
     width: auto;
     height: auto;
-    margin: 20px;
+    padding: 40px;
+}
+.button{
+    display: flex;
     justify-content: center;
 }
