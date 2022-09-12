@@ -102,7 +102,7 @@ export default function VeganYear() {
       <Grid.Container gap={3} justify="center">
         {list.map((item, index, title) => (
           <Grid xs={6} sm={3} key={index}>
-            <Card key={list.idex} isPressable>
+            <Card key={list.idex}>
               <Card.Body css={{ p: 0 }}>
                 <Card.Image
                   src={"https://nextui.org" + item.img}
