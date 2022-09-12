@@ -1,10 +1,10 @@
 import React from 'react'
 import './style/DessertPage.css';
-import Banner from '../bannerHome/Banner'
-import Menu from '../menu/Menu'
-import Footer from '../footer/Footer'
+import Banner from '../../bannerHome/Banner'
+import Menu from '../../menu/Menu'
+import Footer from '../../footer/Footer'
 import DessertCard from './DessertCard'
-import { AllDessertProvider } from '../../context/dessertContext/AllContext';
+import { AllDessertProvider } from '../../../context/dessertContext/AllContext';
 import DessertFiltro from '../dessertFiltro/DessertFiltro'
 
 const DessertPage = () => {

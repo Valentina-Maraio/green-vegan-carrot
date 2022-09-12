@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Card, Row, Col, Text, Grid, Button } from "@nextui-org/react";
 import DessertPageModal from '../dessertPageModal/DessertPageModal';
-import { AllDessertContext } from '../../context/dessertContext/AllContext'
+import { AllDessertContext } from '../../../context/dessertContext/AllContext'
 
 
 const DessertCard = () => {
@@ -49,13 +49,16 @@ const DessertCard = () => {
                   >
                     <Row>
                       <Col>
-                        <Text color="#000" h5>
+                        <Text color="#000" h6>
                           {dessert.title}
                         </Text>
                       </Col>
                     </Row>
                     <Row justify="flex-end">
-                      <DessertPageModal />
+                      <DessertPageModal
+                      title={dessert.title}
+                      photo={dessert.image}
+                      />
                     </Row>
                   </Card.Footer>
                 </Card>

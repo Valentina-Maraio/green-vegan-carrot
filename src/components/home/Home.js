@@ -12,8 +12,8 @@ import QuoteOne from '../quotes/QuoteOne';
 import QuoteTwo from '../quotes/QuoteTwo';
 import Footer from '../footer/Footer'
 import { Spacer } from '@nextui-org/react';
-import DessertBanner from '../dessertBanner/DessertBanner';
-import DessertCarousel from '../dessertCarousel/DessertCarousel';
+import DessertBanner from '../dessert/dessertBanner/DessertBanner';
+import DessertCarousel from '../dessert/dessertCarousel/DessertCarousel';
 import { DessertProvider } from '../../context/dessertContext/AllContext'
 
 const Home = () => {

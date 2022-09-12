@@ -8,7 +8,7 @@ import Home from './components/home/Home';
 import FavRecipes from './pages/favRecipes/FavRecipes';
 import ShoppingList from './pages/shoppingList/ShoppingList';
 import SearchResults from './pages/searchResults/SearchResults';
-import DessertPage from './components/dessertPage/DessertPage';
+import DessertPage from './components/dessert/dessertPage/DessertPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
