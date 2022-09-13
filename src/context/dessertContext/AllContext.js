@@ -9,7 +9,7 @@ export const DessertContext = createContext();
 export const DessertProvider = ({children}) => {
     const [dessert, setDessert] = useState([])
 
-    useEffect(() => { getDessert() })
+    useEffect(() => { getDessert() }, [])
 
     const getDessert = async () => {
         try {
@@ -35,7 +35,7 @@ export const AllDessertContext = createContext();
 export const AllDessertProvider = ({children}) => {
     const [allDessert, setAllDessert] = useState([]);
 
-    useEffect(() => {getAllDessert() })
+    useEffect(() => {getAllDessert() }, [])
 
     const getAllDessert = async() => {
         try {

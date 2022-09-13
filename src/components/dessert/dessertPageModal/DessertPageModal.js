@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button, Text, Col, Row, Card } from "@nextui-org/react";
+import { Modal, Button, Text, Card } from "@nextui-org/react";
 
 export default function DessertPageModal(props) {
     const [visible, setVisible] = React.useState(false);

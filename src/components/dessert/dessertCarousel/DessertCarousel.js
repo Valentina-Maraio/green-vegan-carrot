@@ -22,7 +22,7 @@ const DessertCarousel = () => {
         <Carousel>
           {dessert.map((recipe) => {
             return (
-              <Carousel.Item>
+              <Carousel.Item key={recipe.id}>
                 <Card css={{ w: "100%", h: "400px" }}>
                   <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                     <Col>
