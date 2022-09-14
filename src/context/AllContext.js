@@ -1,6 +1,34 @@
 import axios from "axios";
 import React, { useState, useEffect, createContext } from "react";
-import greenVeganCarrot from '../../api/apiCalls';
+import greenVeganCarrot from '../api/apiCalls';
+import { useParams } from "react-router-dom";
+
+//data for searched recipes
+
+export const SearchContext = createContext();
+
+export const SearchProvider = ({children}) => {
+    const [searchedRecipes, setSearchedRecipes] = useState([]);
+
+    let params = useParams();
+
+    useEffect(() => {
+        getSearchedRecipe(params.search)
+    }, [params.search]);
+
+    const getSearchedRecipe = async(input) => {
+        try{
+            const response = await axios.get(greenVeganCarrot.searchCall + `&query=${input}`)
+            setSearchedRecipes(response.data.recipes)
+            console.log(response)
+        } catch(err){console.log(err)}
+    }
+
+    return (
+        <SearchContext.Provider value={[searchedRecipes, setSearchedRecipes]}>{children}</SearchContext.Provider>
+    )
+}
+
 
 //data for Vegan Dessert't Carousel
 

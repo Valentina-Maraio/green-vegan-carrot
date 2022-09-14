@@ -3,7 +3,7 @@ import './style/DessertCarousel.css'
 import { Link } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import { Card, Col, Button, Text } from "@nextui-org/react";
-import { DessertContext } from '../../../context/dessertContext/AllContext';
+import { DessertContext } from '../../../context/AllContext';
 
 
 

@@ -4,7 +4,7 @@ import Banner from '../../bannerHome/Banner'
 import Menu from '../../menu/Menu'
 import Footer from '../../footer/Footer'
 import DessertCard from './DessertCard'
-import { AllDessertProvider } from '../../../context/dessertContext/AllContext';
+import { AllDessertProvider } from '../../../context/AllContext';
 import DessertFiltro from '../dessertFiltro/DessertFiltro'
 
 const DessertPage = () => {

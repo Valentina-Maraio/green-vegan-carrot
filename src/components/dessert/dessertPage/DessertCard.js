@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Card, Row, Col, Text, Grid, Button } from "@nextui-org/react";
 import DessertPageModal from '../dessertPageModal/DessertPageModal';
-import { AllDessertContext } from '../../../context/dessertContext/AllContext'
+import { AllDessertContext } from '../../../context/AllContext'
 
 
 const DessertCard = () => {

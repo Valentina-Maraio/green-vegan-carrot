@@ -14,7 +14,7 @@ import Footer from '../footer/Footer'
 import { Spacer } from '@nextui-org/react';
 import DessertBanner from '../dessert/dessertBanner/DessertBanner';
 import DessertCarousel from '../dessert/dessertCarousel/DessertCarousel';
-import { DessertProvider } from '../../context/dessertContext/AllContext'
+import { DessertProvider } from '../../context/AllContext'
 
 const Home = () => {
   return (
