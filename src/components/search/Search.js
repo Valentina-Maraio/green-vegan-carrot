@@ -4,11 +4,12 @@ import { InputText } from "primereact/inputtext";
  
 const Search = () => {
   const [input, setInput] = useState("");
+
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
       e.preventDefault();
-      navigate("searched/"+input);
+      navigate('/searched/' + input)
   }
 
   return (

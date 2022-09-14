@@ -7,7 +7,7 @@ import Home from './components/home/Home';
 //pages
 import FavRecipes from './pages/favRecipes/FavRecipes';
 import ShoppingList from './pages/shoppingList/ShoppingList';
-import SearchResults from './pages/searchResults/SearchResults';
+import Searched from './pages/searchResults/Searched';
 import DessertPage from './components/dessert/dessertPage/DessertPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/favrecipes" element={<FavRecipes />}></Route>
           <Route path="/shoppinglist" element={<ShoppingList />}></Route>
-          <Route path="/searchresults" element={<SearchResults />}></Route>
+          <Route path="/searched/:search" element={<Searched />}></Route>
           <Route path="/dessertpage" element={<DessertPage />}></Route>
         </Routes>
       </Router>
