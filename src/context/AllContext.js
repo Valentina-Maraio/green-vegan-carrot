@@ -81,3 +81,20 @@ export const AllDessertProvider = ({children}) => {
         <AllDessertContext.Provider value={[allDessert, setAllDessert]}>{children}</AllDessertContext.Provider>
     )
 }
+
+
+//add to fav page
+
+export const FavRecipesContext = createContext();
+
+export const FavRecipesProvider = ({children}) => {
+    const [favRec, setFavRec] = useState([]);
+
+    const addToFav = (title, image) => {
+        setFavRec((prevState) => [...prevState, { title, image}])
+    };
+
+    return (
+        <FavRecipesContext.Provider value={{ favRec, addToFav}}>{children}</FavRecipesContext.Provider>
+    )
+}

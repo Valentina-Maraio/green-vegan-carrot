@@ -2,11 +2,12 @@ import React, { useContext } from 'react'
 import { Card, Row, Col, Text, Grid, Button } from "@nextui-org/react";
 import DessertPageModal from '../dessertPageModal/DessertPageModal';
 import { AllDessertContext } from '../../../context/AllContext'
+import { FavRecipesContext } from '../../../context/AllContext';
 
-
-const DessertCard = () => {
+const DessertCard = ({ title, image }) => {
 
   const [alldessert] = useContext(AllDessertContext);
+  const { addToFav } = useContext(FavRecipesContext);
 
   return (
     <>
@@ -25,7 +26,9 @@ const DessertCard = () => {
                       height: 10,
                       justifyContent: 'end',
                     }}>
-                    <Button>ICON</Button>
+                    <Button
+                      onPress={() => addToFav(title, image)}
+                    >ICON</Button>
                   </Card.Header>
                   <Card.Body css={{ p: 0 }}>
                     <Card.Image
@@ -56,8 +59,11 @@ const DessertCard = () => {
                     </Row>
                     <Row justify="flex-end">
                       <DessertPageModal
-                      title={dessert.title}
-                      photo={dessert.image}
+                        title={dessert.title}
+                        photo={dessert.image}
+                        recipe={dessert.summary}
+                        cookingTime={dessert.readyInMinutes}
+                        instruction={dessert.analyzedInstructions.steps}
                       />
                     </Row>
                   </Card.Footer>

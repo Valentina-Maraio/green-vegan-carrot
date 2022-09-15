@@ -6,25 +6,46 @@ import Footer from '../../footer/Footer'
 import DessertCard from './DessertCard'
 import { AllDessertProvider } from '../../../context/AllContext';
 import DessertFiltro from '../dessertFiltro/DessertFiltro'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Spacer } from '@nextui-org/react';
 
 const DessertPage = () => {
 
   return (
     <>
-      <div>
-        <Banner />
-        <Menu />
-        <h1>Dessert Page</h1>
-      </div>
-      <div className='filtro'>
-        <DessertFiltro />
-      </div>
-      <div className='dessert-page-box'>
-        <AllDessertProvider>
-          <DessertCard />
-        </AllDessertProvider>
-      </div>
-      <Footer />
+      <Container>
+        <Row>
+          <Col>
+            <Banner />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Menu />
+          </Col>
+          <Spacer />
+          <h1>Dessert Page</h1>
+        </Row>
+        <Row>
+          <div className='filtro'>
+            <DessertFiltro />
+          </div>
+        </Row>
+        <Row>
+          <Col>
+            <div className='dessert-page-box'>
+              <AllDessertProvider>
+                <DessertCard />
+              </AllDessertProvider>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Footer />
+        </Row>
+      </Container>
     </>
   )
 }

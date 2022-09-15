@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, Button, Text, Card } from "@nextui-org/react";
 
-export default function DessertPageModal(props) {
+export default function RecipesDetailsModal(props) {
     const [visible, setVisible] = React.useState(false);
     const handler = () => setVisible(true);
     const closeHandler = () => {
@@ -28,7 +28,7 @@ export default function DessertPageModal(props) {
                     />
                 </Modal.Header>
                 <Modal.Body>
-                <Text size={30}>
+                    <Text size={30}>
                         {props.title} recipe:
                     </Text>
                     <Text>
