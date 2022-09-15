@@ -9,7 +9,7 @@ const SearchResultsCard = () => {
   return (
     <>
     <div>
-      {searchedRecipes.map((item) => {
+      {searchedRecipes?.map((item) => {
         return (
           <p>{item.title}</p>
         )
