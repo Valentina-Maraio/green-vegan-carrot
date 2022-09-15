@@ -19,7 +19,7 @@ export const SearchProvider = ({children}) => {
     const getSearchedRecipe = async(input) => {
         try{
             const response = await axios.get(greenVeganCarrot.searchCall + `query=${input}`)
-            setSearchedRecipes(response.data.recipes)
+            setSearchedRecipes(response.data.results)
             console.log(response)
         } catch(err){console.log(err)}
     }
