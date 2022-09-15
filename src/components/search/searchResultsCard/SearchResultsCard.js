@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { SearchContext } from '../../../context/AllContext'
 
 
 const SearchResultsCard = () => {
 
-
+  const [searchedRecipes] = useContext(SearchContext);
 
   return (
     <>
-    <h3>risultati</h3>
+    <div>
+      {searchedRecipes.map((item) => {
+        return (
+          <p>{item.title}</p>
+        )
+      })}
+    </div>
     </>
   )
 }
