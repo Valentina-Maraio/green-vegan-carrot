@@ -1,11 +1,12 @@
 import React, { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
+import { Link, useNavigate } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FavRecipesContext } from "../../context/AllContext";
+import { Nav } from "react-bootstrap";
+
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 
 const Menu = () => {
   const [input, setInput] = useState("");
@@ -18,12 +19,14 @@ const Menu = () => {
   }
 
   const { favRec } = useContext(FavRecipesContext);
-  console.log(favRec)
+  console.log(favRec);
+
   return (
     <>
+
       <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="/">Home</Navbar.Brand>
+          <Navbar.Brand>Carrot</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -31,8 +34,12 @@ const Menu = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="/favrecipes">
-                Fav {favRec.length}
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link>
+                <Link to={"/favrecipes"}>
+                  <i className="pi pi-heart"></i>
+                  <span>{favRec.length}</span>
+                </Link>
               </Nav.Link>
               <Nav.Link href="/shoppinglist">Shopping List</Nav.Link>
             </Nav>

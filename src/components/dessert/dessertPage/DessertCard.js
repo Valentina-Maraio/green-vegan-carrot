@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Card, Row, Col, Text, Grid, Button } from "@nextui-org/react";
+import { Card, Row, Col, Text, Grid, Button, Spacer } from "@nextui-org/react";
 import DessertPageModal from '../dessertPageModal/DessertPageModal';
 import { AllDessertContext } from '../../../context/AllContext'
 import { FavRecipesContext } from '../../../context/AllContext';
@@ -20,15 +20,18 @@ const DessertCard = ({ title, image }) => {
                   <Card.Header
                     css={{
                       position: "absolute",
-                      borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
-                      top: 0,
+                      top: 10,
                       zIndex: 1,
                       height: 10,
                       justifyContent: 'end',
                     }}>
                     <Button
-                      onPress={() => addToFav(title, image)}
-                    >ICON</Button>
+                      size="xs"
+                      color="error" rounded
+                      onPress={() => addToFav(dessert.title, dessert.image)}
+                    >
+                      <i className="pi pi-heart"></i>
+                    </Button>
                   </Card.Header>
                   <Card.Body css={{ p: 0 }}>
                     <Card.Image

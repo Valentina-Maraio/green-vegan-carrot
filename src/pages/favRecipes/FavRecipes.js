@@ -3,7 +3,7 @@ import { FavRecipesContext } from '../../context/AllContext'
 import BannerFav from '../../components/bannerFav/BannerFav'
 import Menu from '../../components/menu/Menu'
 import Container from 'react-bootstrap/Container';
-import { Card, Row, Col, Text, Grid, Button, Spacer } from "@nextui-org/react";
+import { Card, Row, Col, Text, Grid, Button } from "@nextui-org/react";
 
 const FavRecipes = () => {
   const { favRec } = useContext(FavRecipesContext)
@@ -21,24 +21,27 @@ const FavRecipes = () => {
             <Menu />
           </Col>
         </Row>
-        <Spacer />
         <div className="favs">
-          <Grid.Container>
+          <Grid.Container gap={2} justify="center">
             {favRec.map((item) => {
               return (
                 <Grid xs={12} sm={4}>
                   <Card css={{ w: "100%", h: "400px" }}>
-                    <Card.Header
-                      css={{
-                        position: "absolute",
-                        borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
-                        top: 0,
-                        zIndex: 1,
-                        height: 10,
-                        justifyContent: 'end',
-                      }}>
-                      <Button>ICON</Button>
-                    </Card.Header>
+                  <Card.Header
+                    css={{
+                      position: "absolute",
+                      top: 10,
+                      zIndex: 1,
+                      height: 10,
+                      justifyContent: 'end',
+                    }}>
+                    <Button
+                      size="xs"
+                      color="error" rounded
+                    >
+                      <i className="pi pi-heart-fill"></i>
+                    </Button>
+                  </Card.Header>
                     <Card.Body css={{ p: 0 }}>
                       <Card.Image
                         src={item.image}
