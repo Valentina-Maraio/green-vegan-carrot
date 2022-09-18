@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import { Card, Row, Col, Text, Grid, Button } from "@nextui-org/react";
 
 const FavRecipes = () => {
-  const { favRec } = useContext(FavRecipesContext)
+  const { favRec, deleteFav } = useContext(FavRecipesContext)
 
   return (
     <>
@@ -21,27 +21,32 @@ const FavRecipes = () => {
             <Menu />
           </Col>
         </Row>
+        <Row>
+          <Col>
+            <Button
+              size="xs"
+              color="error" rounded
+              onPress={() => deleteFav(favRec.id)}
+            >
+              Delete All
+            </Button>
+          </Col>
+        </Row>
         <div className="favs">
           <Grid.Container gap={2} justify="center">
             {favRec.map((item) => {
               return (
                 <Grid xs={12} sm={4}>
                   <Card css={{ w: "100%", h: "400px" }}>
-                  <Card.Header
-                    css={{
-                      position: "absolute",
-                      top: 10,
-                      zIndex: 1,
-                      height: 10,
-                      justifyContent: 'end',
-                    }}>
-                    <Button
-                      size="xs"
-                      color="error" rounded
-                    >
-                      <i className="pi pi-heart-fill"></i>
-                    </Button>
-                  </Card.Header>
+                    <Card.Header
+                      css={{
+                        position: "absolute",
+                        top: 10,
+                        zIndex: 1,
+                        height: 10,
+                        justifyContent: 'end',
+                      }}>
+                    </Card.Header>
                     <Card.Body css={{ p: 0 }}>
                       <Card.Image
                         src={item.image}

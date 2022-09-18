@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 
 export const SearchContext = createContext();
 
-export const SearchProvider = ({children}) => {
+export const SearchProvider = ({ children }) => {
     const [searchedRecipes, setSearchedRecipes] = useState([]);
 
     let params = useParams();
@@ -16,12 +16,12 @@ export const SearchProvider = ({children}) => {
         getSearchedRecipe(params.search)
     }, [params.search]);
 
-    const getSearchedRecipe = async(input) => {
-        try{
+    const getSearchedRecipe = async (input) => {
+        try {
             const response = await axios.get(greenVeganCarrot.searchCall + `query=${input}`)
             setSearchedRecipes(response.data.results)
             console.log(response)
-        } catch(err){console.log(err)}
+        } catch (err) { console.log(err) }
     }
 
     return (
@@ -34,7 +34,7 @@ export const SearchProvider = ({children}) => {
 
 export const DessertContext = createContext();
 
-export const DessertProvider = ({children}) => {
+export const DessertProvider = ({ children }) => {
     const [dessert, setDessert] = useState([])
 
     useEffect(() => { getDessert() }, [])
@@ -60,12 +60,12 @@ export const DessertProvider = ({children}) => {
 
 export const AllDessertContext = createContext();
 
-export const AllDessertProvider = ({children}) => {
+export const AllDessertProvider = ({ children }) => {
     const [allDessert, setAllDessert] = useState([]);
 
-    useEffect(() => {getAllDessert() }, [])
+    useEffect(() => { getAllDessert() }, [])
 
-    const getAllDessert = async() => {
+    const getAllDessert = async () => {
         try {
             const inLocalStorage = localStorage.getItem('all-dessert')
             if (inLocalStorage) { setAllDessert(JSON.parse(inLocalStorage)) }
@@ -83,18 +83,38 @@ export const AllDessertProvider = ({children}) => {
 }
 
 
-//add to fav page
+//add recipes to fav page
 
-export const FavRecipesContext = createContext();
+export const FavRecipesContext = createContext({
+    favs: [],
+    addToFav: () => { },
+    deleteFav: () => { },
+});
 
-export const FavRecipesProvider = ({children}) => {
-    const [favRec, setFavRec] = useState([]);
+export const FavRecipesProvider = ({ children }) => {
+    const [favRec, setFavRec] = useState(() => {
+        try {
+            const savedRecipes = localStorage.getItem("saved-recipes");
+            return savedRecipes ? JSON.parse(savedRecipes) : [];
+        } catch (error) {
+            console.log(error)
+        }
+    })
+
+    useEffect(() => {
+        localStorage.setItem("saved-recipes", JSON.stringify(favRec));
+    }, [favRec]);
 
     const addToFav = (title, image) => {
-        setFavRec((prevState) => [...prevState, { title, image}])
+        setFavRec((prevState) => [...prevState, { title, image }])
     };
 
+    //delete all fav from fav recipes page
+    const deleteFav = (id) => setFavRec((favRec) => favRec.filter((fav) => fav.id !== id));
+
+
+
     return (
-        <FavRecipesContext.Provider value={{ favRec, addToFav}}>{children}</FavRecipesContext.Provider>
+        <FavRecipesContext.Provider value={{ favRec, addToFav, deleteFav }}>{children}</FavRecipesContext.Provider>
     )
 }
