@@ -64,8 +64,13 @@ const DessertCard = ({ title, image }) => {
                       <DessertPageModal
                         title={dessert.title}
                         photo={dessert.image}
-                        recipe={dessert.summary}
+                        servings={dessert.servings}
+                        readyIn={dessert.readyInMinutes}
+                        instructions={dessert.instructions}
                         cookingTime={dessert.readyInMinutes}
+                        price={dessert.pricePerServing}
+                        list={dessert.extendedIngredients.map((dessert) => <ul><li>{dessert.name} {dessert.measures.us.amount} {dessert.measures.metric.unitShort}</li></ul>)}
+                        steps={dessert.analyzedInstructions[0].steps.map((dessert) => <ul><li>{dessert.step}</li></ul>)}
                       />
                     </Row>
                   </Card.Footer>

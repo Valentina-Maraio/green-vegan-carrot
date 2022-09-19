@@ -19,7 +19,7 @@ export const SearchProvider = ({ children }) => {
     const getSearchedRecipe = async (input) => {
         try {
             const response = await axios.get(greenVeganCarrot.searchCall + `query=${input}`)
-            setSearchedRecipes(response.data.results)
+            setSearchedRecipes(response.data.results).replace(/<[^>]*>/g, '')
             console.log(response)
         } catch (err) { console.log(err) }
     }
@@ -45,7 +45,7 @@ export const DessertProvider = ({ children }) => {
             if (inLocalStorage) { setDessert(JSON.parse(inLocalStorage)) }
             else {
                 const response = await axios.get(greenVeganCarrot.fewDessert)
-                localStorage.setItem('dessert', JSON.stringify(response.data.recipes))
+                localStorage.setItem('dessert', JSON.stringify(response.data.recipes).replace(/<[^>]*>/g, ''))
                 setDessert(response.data.recipes)
             }
         } catch (error) { console.log(error) }
@@ -71,7 +71,7 @@ export const AllDessertProvider = ({ children }) => {
             if (inLocalStorage) { setAllDessert(JSON.parse(inLocalStorage)) }
             else {
                 const response = await axios.get(greenVeganCarrot.allDessert)
-                localStorage.setItem('all-dessert', JSON.stringify(response.data.recipes))
+                localStorage.setItem('all-dessert', JSON.stringify(response.data.recipes).replace(/<[^>]*>/g, ''))
                 setAllDessert(response.data.recipes)
             }
         } catch (error) { console.log(error) }
@@ -102,7 +102,7 @@ export const FavRecipesProvider = ({ children }) => {
     })
 
     useEffect(() => {
-        localStorage.setItem("saved-recipes", JSON.stringify(favRec));
+        localStorage.setItem("saved-recipes", JSON.stringify(favRec).replace(/<[^>]*>/g, ''));
     }, [favRec]);
 
     const addToFav = (title, image) => {

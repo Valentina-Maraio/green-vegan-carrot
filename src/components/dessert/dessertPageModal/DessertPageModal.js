@@ -1,48 +1,77 @@
-import React from 'react';
-import { Modal, Button, Text, Card } from "@nextui-org/react";
+import React, { useState } from 'react';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Modal from 'react-bootstrap/Modal';
+import Row from 'react-bootstrap/Row';
+import { Button, Card } from "@nextui-org/react";
+import { Badge } from "@nextui-org/react";
+
 
 export default function DessertPageModal(props) {
-    const [visible, setVisible] = React.useState(false);
+    const [visible, setVisible] = useState(false);
+    const [fullscreen, setFullscreen] = useState(true);
     const handler = () => setVisible(true);
     const closeHandler = () => {
         setVisible(false);
     }
     if (props.visible) { return null }
 
+
     return (
         <div>
             <Modal
+                fullscreen={fullscreen}
                 scroll
                 fullScreen
                 blur
                 noPadding
-                open={visible}
+                show={visible}
                 onClose={closeHandler}>
-                <Modal.Header>
-                    <Card.Image
-                        src={props.photo}
-                        width="auto"
-                        height="250px"
-                        objectFit="fit"
-                        alt={props.title}
-                    />
-                </Modal.Header>
-                <Modal.Body>
-                <Text size={30}>
-                        {props.title} recipe:
-                    </Text>
-                    <Text>
-                        {props.recipe}
-                    </Text>
-                    <Text>
-                        {props.cookingTime}
-                    </Text>
+                <Modal.Body className="show-grid">
+                    <Container>
+                        <Row>
+                            <Col xs={6} md={4}>
+                                <Card.Image
+                                    src={props.photo}
+                                    width="auto"
+                                    height="auto"
+                                    objectFit="fit"
+                                    alt={props.title}
+                                />
+                            </Col>
+                            <Col xs={6} md={4} justifyContent="center">
+                                <h3>{props.title}</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={4} md={4}>
+                            <Badge>Servings: {props.servings}</Badge>
+                            </Col>
+                            <Col xs={4} md={4}>
+                            <Badge>Ready in : {props.readyIn} mins</Badge>
+                            </Col>
+                            <Col xs={4} md={4}>
+                            <Badge>Price for servings: {props.price}</Badge>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={8} md={4}>
+
+                                <h5>Ingredients:</h5>
+                                <p>{props.list}</p>
+                            </Col>
+                            <Col xs={12} md={6}>
+                                <h5>Instructions:</h5>
+                                <p>{props.instructions}</p>
+                            </Col>
+                        </Row>
+                    </Container>
                     <Button onPress={closeHandler}>Close</Button>
                 </Modal.Body>
             </Modal>
             <Button size="xs" auto flat color="gray" onPress={handler}>
                 Info
             </Button>
-        </div>
+        </div >
     );
 }
