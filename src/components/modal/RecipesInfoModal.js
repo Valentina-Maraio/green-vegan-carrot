@@ -7,9 +7,9 @@ import { Button, Card } from "@nextui-org/react";
 import { Badge } from "@nextui-org/react";
 
 
-export default function DessertPageModal(props) {
+export default function RecipesInfoModal(props) {
     const [visible, setVisible] = useState(false);
-    const [fullscreen, setFullscreen] = useState(true);
+    const [fullscreen] = useState(true);
     const handler = () => setVisible(true);
     const closeHandler = () => {
         setVisible(false);
@@ -45,13 +45,13 @@ export default function DessertPageModal(props) {
                         </Row>
                         <Row>
                             <Col xs={4} md={4}>
-                            <Badge>Servings: {props.servings}</Badge>
+                                <Badge>Servings: {props.servings}</Badge>
                             </Col>
                             <Col xs={4} md={4}>
-                            <Badge>Ready in : {props.readyIn} mins</Badge>
+                                <Badge>Ready in : {props.readyIn} mins</Badge>
                             </Col>
                             <Col xs={4} md={4}>
-                            <Badge>Price for servings: {props.price}</Badge>
+                                <Badge>Price for servings: {props.price}</Badge>
                             </Col>
                         </Row>
                         <Row>
@@ -65,8 +65,12 @@ export default function DessertPageModal(props) {
                                 <p>{props.instructions}</p>
                             </Col>
                         </Row>
+                        <Row>
+                            <Col>
+                                <Button onPress={closeHandler}>Close</Button>
+                            </Col>
+                        </Row>
                     </Container>
-                    <Button onPress={closeHandler}>Close</Button>
                 </Modal.Body>
             </Modal>
             <Button size="xs" auto flat color="gray" onPress={handler}>

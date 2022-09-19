@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { SearchContext } from '../../../context/AllContext'
 import { Card, Row, Col, Text, Grid, Button } from "@nextui-org/react";
-import RecipesDetailsModal from '../../modal/RecipesDetailsModal'
+import RecipesInfoModal from '../../modal/RecipesInfoModal'
 import { FavRecipesContext } from '../../../context/AllContext';
 
 const SearchResultsCard = () => {
@@ -62,12 +62,16 @@ const SearchResultsCard = () => {
                       </Col>
                     </Row>
                     <Row justify="flex-end">
-                      <RecipesDetailsModal
+                      <RecipesInfoModal
                         title={item.title}
                         photo={item.image}
-                        recipe={item.summary}
+                        servings={item.servings}
+                        readyIn={item.readyInMinutes}
+                        instructions={item.instructions}
                         cookingTime={item.readyInMinutes}
-                        instruction={item.analyzedInstructions}
+                        price={item.pricePerServing}
+                        list={item.extendedIngredients.map((item) => <ul><li>{item.name} {item.measures.us.amount} {item.measures.metric.unitShort}</li></ul>)}
+                        steps={item.analyzedInstructions[0].steps.map((item) => <ul><li>{item.step}</li></ul>)}
                       />
                     </Row>
                   </Card.Footer>

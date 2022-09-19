@@ -4,6 +4,7 @@ import BannerFav from '../../components/bannerFav/BannerFav'
 import Menu from '../../components/menu/Menu'
 import Container from 'react-bootstrap/Container';
 import { Card, Row, Col, Text, Grid, Button } from "@nextui-org/react";
+//import RecipesInfoModal from '../../components/modal/RecipesInfoModal';
 
 const FavRecipes = () => {
   const { favRec, deleteFav } = useContext(FavRecipesContext)
@@ -95,3 +96,19 @@ const FavRecipes = () => {
 }
 
 export default FavRecipes
+
+/*
+
+                          <RecipesInfoModal
+                            title={item.title}
+                            photo={item.image}
+                            servings={item.servings}
+                            readyIn={item.readyInMinutes}
+                            instructions={item.instructions}
+                            cookingTime={item.readyInMinutes}
+                            price={item.pricePerServing}
+                            list={item.extendedIngredients.map((item) => <ul><li>{item.name} {item.measures.us.amount} {item.measures.metric.unitShort}</li></ul>)}
+                            steps={item.analyzedInstructions[0].steps.map((item) => <ul><li>{item.step}</li></ul>)}
+                          />
+                          
+                          */

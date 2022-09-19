@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { Card, Row, Col, Text, Grid, Button } from "@nextui-org/react";
-import DessertPageModal from '../dessertPageModal/DessertPageModal';
 import { AllDessertContext } from '../../../context/AllContext'
 import { FavRecipesContext } from '../../../context/AllContext';
+import RecipesInfoModal from '../../modal/RecipesInfoModal';
 
 const DessertCard = ({ title, image }) => {
 
@@ -61,7 +61,7 @@ const DessertCard = ({ title, image }) => {
                       </Col>
                     </Row>
                     <Row justify="flex-end">
-                      <DessertPageModal
+                      <RecipesInfoModal
                         title={dessert.title}
                         photo={dessert.image}
                         servings={dessert.servings}
