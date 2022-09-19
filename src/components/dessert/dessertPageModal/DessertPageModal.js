@@ -37,10 +37,10 @@ export default function DessertPageModal(props) {
                     <Text>
                         {props.cookingTime}
                     </Text>
-                    <text>{props.instruction}</text>
+                    <Button onPress={closeHandler}>Close</Button>
                 </Modal.Body>
             </Modal>
-            <Button size="xs" auto flat color="gray" onClick={handler}>
+            <Button size="xs" auto flat color="gray" onPress={handler}>
                 Info
             </Button>
         </div>

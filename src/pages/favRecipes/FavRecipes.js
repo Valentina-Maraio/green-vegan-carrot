@@ -46,6 +46,14 @@ const FavRecipes = () => {
                         height: 10,
                         justifyContent: 'end',
                       }}>
+                      <Button
+                        size="xs"
+                        color="error"
+                        rounded
+                        onPress={() => alert('cancellato')}
+                      >
+                        <i className='pi pi-trash'></i>
+                      </Button>
                     </Card.Header>
                     <Card.Body css={{ p: 0 }}>
                       <Card.Image

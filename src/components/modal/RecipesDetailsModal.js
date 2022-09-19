@@ -2,11 +2,15 @@ import React from 'react';
 import { Modal, Button, Text, Card } from "@nextui-org/react";
 
 export default function RecipesDetailsModal(props) {
+
     const [visible, setVisible] = React.useState(false);
+
     const handler = () => setVisible(true);
+
     const closeHandler = () => {
         setVisible(false);
     }
+
     if (props.visible) { return null }
 
     return (
@@ -37,7 +41,10 @@ export default function RecipesDetailsModal(props) {
                     <Text>
                         {props.cookingTime}
                     </Text>
-                    <text>{props.instruction}</text>
+                    <text>
+                        {props.instruction}
+                    </text>
+                    <Button onClick={closeHandler}>Close</Button>
                 </Modal.Body>
             </Modal>
             <Button size="xs" auto flat color="gray" onClick={handler}>
