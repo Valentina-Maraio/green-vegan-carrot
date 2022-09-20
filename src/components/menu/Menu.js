@@ -4,8 +4,9 @@ import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
 import { FavRecipesContext } from "../../context/AllContext";
 import { Nav } from "react-bootstrap";
+import './style/Menu.css'
 
-import Button from 'react-bootstrap/Button';
+//import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
 const Menu = () => {
@@ -19,11 +20,9 @@ const Menu = () => {
   }
 
   const { favRec } = useContext(FavRecipesContext);
-  console.log(favRec);
 
   return (
     <>
-
       <Navbar bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand>Carrot</Navbar.Brand>
@@ -31,14 +30,14 @@ const Menu = () => {
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: '100px' }}
+              style={{ maxHeight: 'auto' }}
               navbarScroll
             >
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link>
-                <Link to={"/favrecipes"}>
+                <Link className="favRec" to={"/favrecipes"}>
                   <i className="pi pi-heart"></i>
-                  <span>{favRec.length}</span>
+                  <span className="saved">{favRec.length}</span>
                 </Link>
               </Nav.Link>
               <Nav.Link href="/shoppinglist">Shopping List</Nav.Link>
@@ -52,8 +51,7 @@ const Menu = () => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
               />
-              <Button variant="outline-success">Search</Button>
-            </Form>
+              {/*<Button variant="outline-success">Search</Button>*/}            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>

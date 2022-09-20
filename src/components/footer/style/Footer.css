@@ -2,3 +2,29 @@
     width: auto;
     height: 200px;
 }
+
+.linkedin{
+    width: auto;
+    height: 50px;
+    background-color: blanchedalmond;
+}
+.github {
+    width: auto;
+    height: 50px;
+    background-color: floralwhite;
+}
+.personal_website {
+    width: auto;
+    height: 50px;
+    background-color: lavenderblush;
+}
+.project{
+    width: auto;
+    height: 50px;
+    background-color: aquamarine;
+}
+.valentina{
+    width: auto;
+    height: 50px;
+    background-color: orange;
+}
