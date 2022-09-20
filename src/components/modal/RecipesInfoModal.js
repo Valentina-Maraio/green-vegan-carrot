@@ -21,10 +21,7 @@ export default function RecipesInfoModal(props) {
         <div>
             <Modal
                 fullscreen={fullscreen}
-                scroll
                 fullScreen
-                blur
-                noPadding
                 show={visible}
                 onClose={closeHandler}>
                 <Modal.Body className="show-grid">

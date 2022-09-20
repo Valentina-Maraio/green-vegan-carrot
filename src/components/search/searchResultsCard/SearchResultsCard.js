@@ -70,8 +70,8 @@ const SearchResultsCard = () => {
                         instructions={item.instructions}
                         cookingTime={item.readyInMinutes}
                         price={item.pricePerServing}
-                        list={item.extendedIngredients.map((item) => <ul><li>{item.name} {item.measures.us.amount} {item.measures.metric.unitShort}</li></ul>)}
-                        steps={item.analyzedInstructions[0].steps.map((item) => <ul><li>{item.step}</li></ul>)}
+                        list={item.extendedIngredients?.map((item) => <ul><li>{item.name} {item.measures.us.amount} {item.measures.metric.unitShort}</li></ul>)}
+                        steps={item.analyzedInstructions[0].steps?.map((item) => <ul><li>{item.step}</li></ul>)}
                       />
                     </Row>
                   </Card.Footer>
