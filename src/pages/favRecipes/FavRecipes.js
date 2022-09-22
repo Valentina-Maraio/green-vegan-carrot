@@ -51,7 +51,6 @@ const FavRecipes = () => {
                         size="xs"
                         color="error"
                         rounded
-                        onPress={() => alert('cancellato')}
                       >
                         <i className='pi pi-trash'></i>
                       </Button>
