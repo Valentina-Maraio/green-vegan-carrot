@@ -3,3 +3,9 @@
     height: 100%;
     background-color: #fcd2a3;
 }
+
+.vegan_friendly {
+    max-width: 500px;
+    height: 500px;
+    padding: 10px;
+}

@@ -3,8 +3,9 @@ import { FavRecipesContext } from '../../context/AllContext'
 import BannerFav from '../../components/bannerFav/BannerFav'
 import Menu from '../../components/menu/Menu'
 import Container from 'react-bootstrap/Container';
+import './style/favRecipes.css'
 import { Card, Row, Col, Text, Grid, Button } from "@nextui-org/react";
-//import RecipesInfoModal from '../../components/modal/RecipesInfoModal';
+import RecipesInfoModal from '../../components/modal/RecipesInfoModal';
 
 const FavRecipes = () => {
   const { favRec, deleteFav } = useContext(FavRecipesContext)
@@ -22,7 +23,7 @@ const FavRecipes = () => {
             <Menu />
           </Col>
         </Row>
-        <Row>
+        <Row className="delete_button">
           <Col>
             <Button
               size="xs"
@@ -52,7 +53,7 @@ const FavRecipes = () => {
                         color="error"
                         rounded
                       >
-                        <i className='pi pi-trash'></i>
+                        <i className='pi pi-heart-fill'></i>
                       </Button>
                     </Card.Header>
                     <Card.Body css={{ p: 0 }}>

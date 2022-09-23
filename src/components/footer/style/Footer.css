@@ -2,29 +2,11 @@
     width: auto;
     height: 200px;
 }
+.linkedin, .github, .project, .valentina {
+    width: auto;
+    height: 50px;
+}
 
-.linkedin{
-    width: auto;
-    height: 50px;
-    background-color: blanchedalmond;
-}
-.github {
-    width: auto;
-    height: 50px;
-    background-color: floralwhite;
-}
-.personal_website {
-    width: auto;
-    height: 50px;
-    background-color: lavenderblush;
-}
-.project{
-    width: auto;
-    height: 50px;
-    background-color: aquamarine;
-}
-.valentina{
-    width: auto;
-    height: 50px;
-    background-color: orange;
+.linkedin, .github, .contact {
+    background-color: #fcd2a3;
 }

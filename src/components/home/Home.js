@@ -6,10 +6,7 @@ import Col from 'react-bootstrap/Col';
 
 import Banner from '../bannerHome/Banner'
 import Menu from '../menu/Menu'
-import VeganYearDescription from '../bannerVeganYear/VeganYearDescription';
-import VeganYear from '../year/VeganYear'
 import Footer from '../footer/Footer'
-import { Spacer } from '@nextui-org/react';
 import DessertBanner from '../dessertBanner/DessertBanner'
 
 const Home = () => {
@@ -31,17 +28,6 @@ const Home = () => {
             <DessertBanner />
           </Col>
         </Row>
-        <Row>
-          <Col>
-            <VeganYearDescription />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <VeganYear />
-          </Col>
-        </Row>
-        <Spacer />
         <Row>
           <Col>
             <Footer />

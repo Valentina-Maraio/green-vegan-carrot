@@ -23,8 +23,6 @@ const SearchResultsPage = () => {
           <Col>
             <Menu />
           </Col>
-          <Spacer />
-          <h1>Result Page</h1>
         </Row>
         <Row>
           <Col>

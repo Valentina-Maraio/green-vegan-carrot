@@ -40,11 +40,11 @@ const Menu = () => {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link>
                 <Link className="favRec" to={"/favrecipes"}>
+                  <span className="saved">Favorite Recipes</span>
                   <i className="pi pi-heart"></i>
                   <span className="saved">{favRec.length}</span>
                 </Link>
               </Nav.Link>
-              <Nav.Link href="/shoppinglist">Shopping List</Nav.Link>
             </Nav>
             <Form className="d-flex" onSubmit={submitHandler}>
               <Form.Control

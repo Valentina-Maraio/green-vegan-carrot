@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import { Button, Card, Spacer } from "@nextui-org/react";
 import { Badge } from "@nextui-org/react";
+import './style/Details.css'
 
 
 export default function RecipesInfoModal(props) {
@@ -22,7 +23,8 @@ export default function RecipesInfoModal(props) {
             <Modal
                 fullscreen={fullscreen}
                 show={visible}
-                onClose={closeHandler}>
+                onClose={closeHandler}
+                >
                 <Modal.Body className="show-grid">
                     <Container>
                         <Row>

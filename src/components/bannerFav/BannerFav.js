@@ -1,10 +1,11 @@
 import React from 'react'
 import './style/BannerFav.css'
+import logo from '../../assets/images/home_banner_name.png'
 
 const BannerFav = () => {
     return (
-        <div className='fav-banner'>
-            <h1>Fav Recipes</h1>
+        <div className='img'>
+            <img src={logo} alt="favRec" />
         </div>
     )
 }
