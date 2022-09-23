@@ -5,7 +5,7 @@
 }
 
 .vegan_friendly {
-    max-width: 500px;
+    width: auto;
     height: 500px;
     padding: 10px;
 }
