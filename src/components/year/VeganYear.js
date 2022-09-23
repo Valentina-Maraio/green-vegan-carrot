@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Card, Grid, Row } from "@nextui-org/react";
 import VegetableDetail from '../modal/VegetableDetail';
 
+
 export default function VeganYear() {
   const list = [
     {
@@ -57,7 +58,7 @@ export default function VeganYear() {
   const [visible, setVisible] = useState(false);
 
   return (
-    <>
+    <div>
       <Grid.Container gap={3} justify="center">
         {list.map((item, index, title) => (
           <Grid xs={6} sm={3} key={index}>
@@ -88,6 +89,6 @@ export default function VeganYear() {
           </Grid>
         ))}
       </Grid.Container>
-    </>
+    </div>
   );
 }

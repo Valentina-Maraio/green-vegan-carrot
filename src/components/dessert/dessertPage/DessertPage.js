@@ -24,18 +24,21 @@ const DessertPage = () => {
           <Col>
             <Menu />
           </Col>
-          <Spacer />
-          <h1>Dessert Page</h1>
         </Row>
-        <Row>
-          <Col>
-            <div className='dessert-page-box'>
-              <AllDessertProvider>
-                <DessertCard />
-              </AllDessertProvider>
-            </div>
-          </Col>
-        </Row>
+        <div className='dessert-page-box'>
+          <Row>
+            <h1>Dessert Page</h1>
+          </Row>
+          <Row>
+            <Col>
+              <div>
+                <AllDessertProvider>
+                  <DessertCard />
+                </AllDessertProvider>
+              </div>
+            </Col>
+          </Row>
+        </div>
         <Row>
           <Footer />
         </Row>
