@@ -6,27 +6,25 @@ import Col from 'react-bootstrap/Col';
 import DessertCarousel from './dessertCarousel/DessertCarousel';
 import { DessertProvider } from '../../context/AllContext';
 import { Spacer } from '@nextui-org/react';
-import vegan from '../../assets/images/vegan_friendly.jpg'
+import vegan from '../../assets/images/vegan_friendly.png'
 
 
 const DessertBanner = () => {
     return (
-        <div className='sweets'>
-            <Container>
+        <>
+            <Container className='sweets'>
                 <Row>
                     <Spacer />
-                    <Col className='more_dessert_button' sm={6}>
+                    <Col className='dessert_banner' sm={12}>
                         <h2>Who said vegan desserts are boring?</h2>
-                        <img className="vegan_friendly" src={vegan} alt="vegan_friend"/>
-                    </Col>
-                    <Col className='dessert_banner' sm={6}>
+                        <img className="vegan_friendly" src={vegan} alt="vegan_friend" />
                         <DessertProvider>
                             <DessertCarousel />
                         </DessertProvider>
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </>
     )
 }
 
