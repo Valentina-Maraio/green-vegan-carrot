@@ -7,19 +7,11 @@ export default function VeganYear() {
   const list = [
     {
       title: "January",
-      img: "/images/fruit-1.jpeg",
-      vegetables: [{
-        beets: "Beets",
-      }
-      ]
+      img: "/images/fruit-1.jpeg"
     },
     {
       title: "February",
-      img: "/images/fruit-2.jpeg",
-      vegetables: [{
-        beets: "Beets",
-      }
-      ]
+      img: "/images/fruit-2.jpeg"
     },
     {
       title: "March",
@@ -31,67 +23,35 @@ export default function VeganYear() {
     },
     {
       title: "May",
-      img: "/images/fruit-5.jpeg",
-      vegetables: [{
-        beets: "Beets",
-      }
-      ]
+      img: "/images/fruit-5.jpeg"
     },
     {
       title: "June",
-      img: "/images/fruit-6.jpeg",
-      vegetables: [{
-        beets: "Beets",
-      }
-      ]
+      img: "/images/fruit-6.jpeg"
     },
     {
       title: "July",
-      img: "/images/fruit-7.jpeg",
-      vegetables: [{
-        beets: "Beets",
-      }
-      ]
+      img: "/images/fruit-7.jpeg"
     },
     {
       title: "August",
-      img: "/images/fruit-8.jpeg",
-      vegetables: [{
-        beets: "Beets",
-      }
-      ]
+      img: "/images/fruit-8.jpeg"
     },
     {
       title: "September",
-      img: "/images/fruit-3.jpeg",
-      vegetables: [{
-        beets: "Beets",
-      }
-      ]
+      img: "/images/fruit-3.jpeg"
     },
     {
       title: "October",
-      img: "/images/fruit-2.jpeg",
-      vegetables: [{
-        beets: "Beets",
-      }
-      ]
+      img: "/images/fruit-2.jpeg"
     },
     {
       title: "November",
-      img: "/images/fruit-5.jpeg",
-      vegetables: [{
-        beets: "Beets",
-      }
-      ]
+      img: "/images/fruit-5.jpeg"
     },
     {
       title: "December",
-      img: "/images/fruit-6.jpeg",
-      vegetables: [{
-        beets: "Beets",
-      }
-      ]
+      img: "/images/fruit-6.jpeg"
     },
   ];
 

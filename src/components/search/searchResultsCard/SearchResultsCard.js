@@ -13,9 +13,9 @@ const SearchResultsCard = () => {
     <>
       <div className='recipes'>
         <Grid.Container gap={2} justify="center">
-          {searchedRecipes?.map((item) => {
+          {searchedRecipes?.map((item, id) => {
             return (
-              <Grid xs={12} sm={4}>
+              <Grid key={id} xs={12} sm={4}>
                 <Card css={{ w: "100%", h: "400px" }}>
                   <Card.Header
                     css={{
@@ -67,7 +67,7 @@ const SearchResultsCard = () => {
                         photo={item.image}
                         servings={item.servings}
                         readyIn={item.readyInMinutes}
-                        instructions={item.instructions}
+                        instructions={item.summary}
                         cookingTime={item.readyInMinutes}
                         price={item.pricePerServing}
                         list={item.extendedIngredients?.map((item) => <ul><li>{item.name} {item.measures.us.amount} {item.measures.metric.unitShort}</li></ul>)}
