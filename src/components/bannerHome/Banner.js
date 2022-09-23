@@ -1,11 +1,12 @@
 import React from 'react'
 import './style/Banner.css'
+import logo from '../../assets/images/home_banner_name.png'
 
 const Banner = () => {
   return (
     <>
       <div className="banner">
-        <h1>GREEN VEGAN CARROT</h1>
+        <img src={logo} alt="banner"/>
       </div>
     </>
   )

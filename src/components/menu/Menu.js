@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FavRecipesContext } from "../../context/AllContext";
 import { Nav } from "react-bootstrap";
 import './style/Menu.css'
-
+import carrot from '../../assets/images/carrot.png'
 //import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
@@ -23,9 +23,13 @@ const Menu = () => {
 
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar style={{ backgroundColor: "#fed977" }} expand="lg">
         <Container fluid>
-          <Navbar.Brand>Carrot</Navbar.Brand>
+          <Navbar.Brand>
+            <Nav.Link href="/">
+              <img className="logo" src={carrot} />
+            </Nav.Link>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav

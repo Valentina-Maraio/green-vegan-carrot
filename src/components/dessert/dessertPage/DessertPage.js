@@ -5,7 +5,6 @@ import Menu from '../../menu/Menu'
 import Footer from '../../footer/Footer'
 import DessertCard from './DessertCard'
 import { AllDessertProvider } from '../../../context/AllContext';
-import DessertFiltro from '../dessertFiltro/DessertFiltro'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -27,11 +26,6 @@ const DessertPage = () => {
           </Col>
           <Spacer />
           <h1>Dessert Page</h1>
-        </Row>
-        <Row>
-          <div className='filtro'>
-            <DessertFiltro />
-          </div>
         </Row>
         <Row>
           <Col>

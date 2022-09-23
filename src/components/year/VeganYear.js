@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-//import './style/VeganYear.css'
 import { Card, Grid, Row } from "@nextui-org/react";
 import VegetableDetail from '../modal/VegetableDetail';
 

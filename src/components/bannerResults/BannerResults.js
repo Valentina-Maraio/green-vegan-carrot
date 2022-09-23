@@ -1,15 +1,14 @@
 import React from 'react'
 import './style/BannerResults.css'
-import { Image } from "@nextui-org/react";
-
+import recipes from '../../assets/images/recipes.png'
 
 const BannerResults = () => {
     return (
-        <div className='results-banner'>
-            <Image
-                objectFit="cover"
-                alt="Default Image"
-                height={300}
+        <div>
+            <img
+                className='recipes'
+                alt="recipes"
+                src={recipes}
             />
         </div>
     )

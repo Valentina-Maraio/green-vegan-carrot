@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 
 import Banner from '../bannerHome/Banner'
 import Menu from '../menu/Menu'
-import VeganYearDescription from '../veganYearDescription/VeganYearDescription';
+import VeganYearDescription from '../bannerVeganYear/VeganYearDescription';
 import VeganYear from '../year/VeganYear'
 import QuoteOne from '../quotes/QuoteOne';
 import QuoteTwo from '../quotes/QuoteTwo';
