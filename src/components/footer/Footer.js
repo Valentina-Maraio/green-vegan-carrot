@@ -11,11 +11,6 @@ const Footer = () => {
     <>
       <Container>
         <Spacer />
-        <Row className="contact">
-          <Col>
-            <h5>Contacts</h5>
-          </Col>
-        </Row>
         <Row>
           <Col className='linkedin' sm>
             <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">

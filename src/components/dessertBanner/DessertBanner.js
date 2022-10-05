@@ -16,8 +16,6 @@ const DessertBanner = () => {
                 <Row>
                     <Spacer />
                     <Col className='dessert_banner' sm={12}>
-                        <h2>Who said vegan desserts are boring?</h2>
-                        <img className="vegan_friendly" src={vegan} alt="vegan_friend" />
                         <DessertProvider>
                             <DessertCarousel />
                         </DessertProvider>

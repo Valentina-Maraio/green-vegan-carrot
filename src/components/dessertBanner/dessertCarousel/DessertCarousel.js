@@ -14,6 +14,13 @@ const DessertCarousel = () => {
   return (
     <>
       <div className='carousel-box'>
+        <Spacer />
+        <div className='button'>
+          <Link to='/dessertpage'>
+            <Button color="warning">More dessert</Button>
+          </Link>
+        </div>
+        <Spacer />
         <Carousel>
           {dessert.map((recipe) => {
             return (
@@ -44,13 +51,6 @@ const DessertCarousel = () => {
           })}
         </Carousel>
       </div>
-      <Spacer />
-      <div className='button'>
-        <Link to='/dessertpage'>
-          <Button color="warning">More dessert</Button>
-        </Link>
-      </div>
-      <Spacer />
     </>
   )
 }

@@ -23,7 +23,7 @@ const Menu = () => {
 
   return (
     <>
-      <Navbar style={{ backgroundColor: "#fed977" }} expand="lg">
+      <Navbar bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand>
             <Nav.Link href="/">
