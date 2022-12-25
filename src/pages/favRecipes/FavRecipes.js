@@ -5,7 +5,7 @@ import Menu from '../../components/menu/Menu'
 import Container from 'react-bootstrap/Container';
 import './style/favRecipes.css'
 import { Card, Row, Col, Text, Grid, Button } from "@nextui-org/react";
-import RecipesInfoModal from '../../components/modal/RecipesInfoModal';
+//import RecipesInfoModal from '../../components/modal/RecipesInfoModal';
 
 const FavRecipes = () => {
   const { favRec, deleteFav } = useContext(FavRecipesContext)

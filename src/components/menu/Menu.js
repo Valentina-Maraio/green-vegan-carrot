@@ -27,7 +27,7 @@ const Menu = () => {
         <Container fluid>
           <Navbar.Brand>
             <Nav.Link href="/">
-              <img className="logo" src={carrot} />
+              <img className="logo" src={carrot} alt="algo"/>
             </Nav.Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />

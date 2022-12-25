@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import DessertCarousel from './dessertCarousel/DessertCarousel';
 import { DessertProvider } from '../../context/AllContext';
 import { Spacer } from '@nextui-org/react';
-import vegan from '../../assets/images/vegan_friendly.png'
+//import vegan from '../../assets/images/vegan_friendly.png'
 
 
 const DessertBanner = () => {
